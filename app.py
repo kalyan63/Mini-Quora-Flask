@@ -12,8 +12,8 @@ app.config['UPLOAD_FOLDER']='ImgFolder/'
 
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'chiluverupreeti@gmail.com' # _________________ADD YOUR EMAIL ID AND PASSWORD _____________
-app.config['MAIL_PASSWORD'] = 'pReeticH23' # _______________ADD YOUR EMAIL ID AND PASSWORD __________________
+app.config['MAIL_USERNAME'] = '<emter you Mail>' # _________________ADD YOUR EMAIL ID AND PASSWORD _____________
+app.config['MAIL_PASSWORD'] = '<enter you Pass>' # _______________ADD YOUR EMAIL ID AND PASSWORD __________________
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 app.config['MAIL_DEBUG'] = True
