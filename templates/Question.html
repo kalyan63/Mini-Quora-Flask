@@ -19,7 +19,7 @@
         <br/>
         <input type="file" name="file" value="Add file to support your Answer">
         <input type="checkbox" id="anonymous" name="anonymous" value="1">
-        <label for="anonymous"> I want to ask anonymously </label><br>
+        <label for="anonymous"> I want to answer anonymously </label><br>
         <input type="submit" value="Answer Question"/>
     </form>
 </div>
@@ -28,7 +28,7 @@
 {% for Ans in Question['Ans'] %}
     <div class="border bg-dark text-white">
         {% if Ans[7] == 1 %}
-            <p>user: Ananymous<p>
+            <p>user: Anonymous<p>
         {% else %}
         <p><a href="/profile/{{Ans[2]}}" class="btn btn-info">{{get_Name(Ans[2])}}</a></p>
         {% endif %}
