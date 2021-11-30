@@ -94,14 +94,21 @@ def UserQuestionList(user_id):
     Aut=[]
     Aut.append(session['UserId']==user_id)
     Aut.append(GetUserName(user_id))
-    return render_template('UserQuestionList.html',Questions=GetUserQues(user_id),Aut=Aut)
+    if(Aut[0]==1):
+        return render_template('UserQuestionList.html',Questions=GetUserQues(user_id,0),Aut=Aut)
+    else:
+        return render_template('UserQuestionList.html',Questions=GetUserQues(user_id,1),Aut=Aut)
+
 
 @app.route('/profile/Answer/<int:user_id>')
 def UserAnswerList(user_id):
     Aut=[]
     Aut.append(session['UserId']==user_id)
     Aut.append(GetUserName(user_id))
-    return render_template('UserAnswerList.html',Answers=GetUserAns(user_id),Aut=Aut)
+    if(Aut[0]==1):
+        return render_template('UserAnswerList.html',Answers=GetUserAns(user_id,0),Aut=Aut)
+    else:
+        return render_template('UserAnswerList.html',Answers=GetUserAns(user_id,1),Aut=Aut)   
 
 @app.route('/Answer/<int:A_id>',methods=["POST","GET"])
 def Answer(A_id):
